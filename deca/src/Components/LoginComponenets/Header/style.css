@@ -1,0 +1,10 @@
+#login_head {
+    padding: 10px;
+}
+
+#login_name {
+    font-size: 5rem;
+    float: left;
+    color: rgb(160, 160, 160);
+
+}
