@@ -1,0 +1,38 @@
+#walletImg {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+#walletImg:hover {
+    transition: 2000ms;
+    transform: rotateX(360deg);
+    height: 40px;
+    width: 40px;
+}
+
+#walletBtns {
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    font-size: 18px;
+    height: 60px;
+    float: left;
+    box-shadow: 1px 1px 3px rgb(145, 145, 145);
+    padding: 10px 15px;
+    opacity: 90%;
+}
+
+#walletBtns:hover {
+    transition: 250ms;
+    font-size: 20px;
+    box-shadow: 1px 5px 10px rgb(145, 145, 145);
+    src: format();
+    opacity: 100%;
+    /* background-color: rgb(24, 150, 253); */
+}
+
+#walletName {
+    position: relative;
+    bottom: 30%;
+}

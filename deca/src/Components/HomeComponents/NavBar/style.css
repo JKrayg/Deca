@@ -1,0 +1,66 @@
+#changeUsernameBtn {
+    font-size: 12px;
+    padding: 5px 10px;
+    position: relative;
+    top: 50%;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #5865dbd3;
+    border-top-right-radius: 0;
+}
+
+.nav-tabs .nav-link {
+    background:none;
+    filter:none;
+    box-shadow:none;
+    border-radius: 3px 3px 0px 0px;
+    transition: none;
+    color: #7cda7cbb;
+    font-size: 20px;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #5865dbd3;
+    outline: none;
+    transition: none;
+}
+
+.nav-tabs .nav-link.active{
+    color: #6e79ddad;
+    border-top-color: #5865dbd3;
+    border-left-color: #5865dbd3;
+    border-right-color: #5865dbd3;
+}
+
+.tab-pane{
+    /* background-color: rgba(255, 255, 255, 0.555);
+    height: fit-content; */
+    padding: 20px;
+    /* border-radius: 5px 0px; */
+}
+
+.card{
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid #5865dbd3;
+}
+
+/* .card-body {
+    height: '75%';
+    width: '75%';
+    margin-right: '0px';
+} */
+
+#enlarge.modal-link {
+
+}
+
+#nftCard {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    font-size: 11px;
+    float: left;
+}

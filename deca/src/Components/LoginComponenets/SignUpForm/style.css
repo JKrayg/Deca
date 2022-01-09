@@ -1,0 +1,36 @@
+#signUpStyle {
+    line-height: 1.5rem;
+    font-family: Dosis, sans-serif;
+    box-shadow: 1px 3px 10px rgb(145, 145, 145);
+    font-size: 1rem;
+    border-radius: 4px 30px;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+#signUpHeader {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#signUpBtn {
+    background-color: #4BB543;
+    border: none;
+    margin-top: 5px;
+}
+
+#followUsHead {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#followIcons {
+    margin-top: 4px;
+}
+
+#iconStyle {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
