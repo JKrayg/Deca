@@ -4,8 +4,11 @@
 
 #home_name {
     font-size: 5rem;
-    color: #5865dbd3;
-
+    float: left;
+    background: -webkit-linear-gradient(#17cfcf, #acecdc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0;
 }
 
 #logoutBtnGroup {

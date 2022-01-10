@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Components/LoginComponenets/Header';
 import WalletSignIn from '../Components/LoginComponenets/WalletSignIn';
 import Moralis from 'moralis'
+import { useMoralis } from 'react-moralis';
 // import LoginForm from '../Components/LoginComponenets/LoginForm'
 // import SignUpForm from '../Components/LoginComponenets/SignUpForm';
 // import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
@@ -68,15 +69,15 @@ class Login extends Component {
 
 
     //wallet login
-    handleWalletLogin = async (e) => {
-        var user = '';
-        e.preventDefault();
+    handleWalletLogin = async (event) => {
+        event.preventDefault();
+        const name = event.currentTarget.getAttribute("name");
+        let currentUser = Moralis.User.current();
+        let user;
+        console.log(name);
         try {
-            let currentUser = Moralis.User.current();
             if (!currentUser) {
-                console.log(e.target.name);
-                console.log("login clicked");
-                if (e.target.name === 'walletconnect') {
+                if (name === 'WalletConnect') {
                     user = await Moralis.Web3.authenticate({
                         provider: 'walletconnect',
                         mobileLinks: [
@@ -88,8 +89,8 @@ class Login extends Component {
                             "pillar",
                         ]});
                 } else {
-                    user = await Moralis.Web3.authenticate({ provider: e.target.name, chainId: 1 });
-                } 
+                    user = await Moralis.Web3.authenticate();
+                }
             }
         } catch(error) {
             console.log(error);

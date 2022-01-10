@@ -6,7 +6,7 @@
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #5865dbd3;
+    border-bottom: 1px solid #17cfcf;
     border-top-right-radius: 0;
 }
 
@@ -16,21 +16,27 @@
     box-shadow:none;
     border-radius: 3px 3px 0px 0px;
     transition: none;
-    color: #7cda7cbb;
+    color: #acecdc;
     font-size: 20px;
 }
 
 .nav-tabs .nav-link:hover {
-    border-color: #5865dbd3;
+    border-color: #17cfcf;
     outline: none;
     transition: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .nav-tabs .nav-link.active{
-    color: #6e79ddad;
-    border-top-color: #5865dbd3;
-    border-left-color: #5865dbd3;
-    border-right-color: #5865dbd3;
+    color: #17cfcf;
+    background-color: #ebfbfb;
+    border-bottom-color: #ebfbfb;
+    border-top-color: #17cfcf;
+    border-left-color: #17cfcf;
+    border-right-color: #17cfcf;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .tab-pane{
@@ -44,7 +50,7 @@
     display: block;
     height: fit-content;
     width: fit-content;
-    border: 1px solid #5865dbd3;
+    border: 1px solid #17cfcf;
 }
 
 /* .card-body {
@@ -63,4 +69,10 @@
     width: 30%;
     font-size: 11px;
     float: left;
+}
+
+#nft-image {
+    padding: 9px;
+    border: 1px solid transparent;
+    border-radius: 15px;
 }

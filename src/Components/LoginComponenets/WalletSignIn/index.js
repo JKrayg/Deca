@@ -17,17 +17,17 @@ const testWalletStyle = {
 function WalletSignIn(props) {
     const wallets = [
         {
-            name: 'MetaMask',
+            wallet: 'MetaMask',
             style: metamaskStyle,
             img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1024px-MetaMask_Fox.svg.png"
         },
         {
-            name: 'WalletConnect',
+            wallet: 'WalletConnect',
             style: walletConnectStyle,
             img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdcentlife.io%2Fwp-content%2Fuploads%2F2020%2F09%2Fa5169900-c66c-11e9-8592-33c7334dfd6d.png&f=1&nofb=1"
         },
         {
-            name: 'testWallet',
+            wallet: 'testWallet',
             style: testWalletStyle,
             img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/10-gon_rhombic_dissection7-size2.svg/150px-10-gon_rhombic_dissection7-size2.svg.png"
         }]
@@ -38,13 +38,14 @@ function WalletSignIn(props) {
             {wallets.map(results => (
                 <div key={uuidv4()}>
                     <button
-                    name={results.name}
+                    value="submit"
+                    name={results.wallet}
                     style = {results.style}
                     id="walletBtns" onClick={props.handleWalletLogin}
                     className="btn btn-primary">
                         <img id="walletImg"
                         alt={results.name}
-                        src={results.img}/><span id = 'walletName'>{results.name}</span></button>
+                        src={results.img}/><span id = 'walletName'>{results.wallet}</span></button>
                 </div>
             ))}
              

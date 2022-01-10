@@ -66,13 +66,10 @@ function NavBar(props) {
                                 <div className='col-md-8'>
                                     {props.nfts.map(nft => (
                                         <div key={uuidv4()} id='nftCard' className="card">
-                                            <img src={nft.image} className="card-img-top" alt="..."/>
+                                            <img src={nft.image} id='nft-image' className="card-img-top" alt="..."/>
                                             <div className="card-body">
                                                 <h5 className="card-title">{nft.name}</h5>
                                                 <p style={{marginBottom: '10px'}} className="card-text">Owner: {props.owner}</p>
-                                                <a style={{color: 'lightslategray', marginTop: '10px', textDecoration: 'none'}}
-                                                    href='#' className='modal-link' id='enlarge'>Enlarge🔎</a>
-                                                <a style={{marginTop: '10px'}} href="#" className="btn btn-primary">Go somewhere</a>
                                             </div>
                                         </div>
                                     ))}
