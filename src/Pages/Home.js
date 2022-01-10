@@ -74,21 +74,21 @@ export class Home extends Component {
 
     // NEED IPFS. GO INTO "token_uri"
     getNFTs = async () => {
-        const address = this.state.nftAddress;
+        // const address = this.state.nftAddress;
         let owner;
-        const options = { chain: 'eth', address: address };
+        const options = { chain: 'matic', address: this.state.walletAddress };
         const ethNFTs = await Moralis.Web3API.account.getNFTs(options);
+        const result = ethNFTs.result;
+        console.log(result);
         let tokens = [];
-        for (let i = 0; i < 10; i++) {
-            const result = ethNFTs.result[i];
-            console.log(result);
-            owner = result.owner_of;
-            const metadata = result.metadata;
+        for (let i = 0; i < result.length; i++) {
+            owner = result[i].owner_of;
+            const metadata = result[i].metadata;
+            const parse = JSON.parse(metadata)
             console.log(metadata)
             if (metadata === null) {
                 console.log("Element " + i + " has no data");
             } else {
-                const parse = JSON.parse(metadata)
                 tokens.push(parse)
                 
             }

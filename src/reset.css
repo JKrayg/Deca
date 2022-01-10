@@ -28,16 +28,18 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	overflow-x: hidden;
-	font-family: 'Source Code Pro', monospace;
+	font-family: 'IBM Plex Sans', monospace;
+	background-color: #ebfbfb;
 }
 
 body::after {
 	content: "";
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/10-gon_rhombic_dissection5-size2.svg/630px-10-gon_rhombic_dissection5-size2.svg.png);
+	background-image: url(C:\VScode\Deca\src\logo.png);
 	background-repeat: no-repeat;
-	opacity: 0.5;
-	top: 14rem;
-	left: 30rem;
+	background-size: auto;
+	background-position: center;
+	top: 27%;
+	left: 0;
 	bottom: 0;
 	right: 0;
 	position: absolute;
