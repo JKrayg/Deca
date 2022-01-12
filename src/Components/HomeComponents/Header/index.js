@@ -20,7 +20,7 @@ function Header(props) {
                             </div>
                             <div className='col-md-12'>
                             <div id='logoutBtnGroup' className="btn-group">
-                                <button id='logoutToggle'  type="button" className="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button id='logoutToggle' className="btn btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span className="visually-hidden">Toggle Dropdown</span>
                                 </button>
                                 <button type='dropdown' className="dropdown-menu"

@@ -9,11 +9,6 @@ const metamaskStyle = {
 const walletConnectStyle = {
     backgroundColor: 'rgb(24, 150, 253)'
 }
-
-const testWalletStyle = {
-    backgroundColor: 'red'
-}
-
 function WalletSignIn(props) {
     const wallets = [
         {
@@ -25,11 +20,6 @@ function WalletSignIn(props) {
             wallet: 'WalletConnect',
             style: walletConnectStyle,
             img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdcentlife.io%2Fwp-content%2Fuploads%2F2020%2F09%2Fa5169900-c66c-11e9-8592-33c7334dfd6d.png&f=1&nofb=1"
-        },
-        {
-            wallet: 'testWallet',
-            style: testWalletStyle,
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/10-gon_rhombic_dissection7-size2.svg/150px-10-gon_rhombic_dissection7-size2.svg.png"
         }]
 
 

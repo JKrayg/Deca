@@ -1,0 +1,63 @@
+/*-----------------------------------------
+// FIX THIS MESS
+//-----------------------------------------*/
+
+#ring1 {
+    position: fixed;
+    rotate: 50deg;
+    top: 4%;
+    left: 21%;
+    height: 43.2px;
+    width: 76.8px;
+    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
+}
+
+#ring2 {
+    position: fixed;
+    rotate: 50deg;
+    top: 6%;
+    left: 21%;
+    height: 43.2px;
+    width: 76.8px;
+    animation: 1s cubic-bezier(0, 0, 0, 1.27) 100ms 1 slideInLeft;
+}
+
+#ring3 {
+    position: fixed;
+    rotate: 50deg;
+    top: 8%;
+    left: 21%;
+    height: 43.2px;
+    width: 76.8px;
+    animation: 1s cubic-bezier(0, 0, 0, 1.27) 200ms 1 slideInLeft;
+}
+
+body:hover #ring1 {
+    animation: 2480ms infinite ease-in-out example;
+}
+
+body:hover #ring2 {
+    animation: 2500ms infinite ease-in-out example;
+}
+
+body:hover #ring3 {
+    animation: 2520ms infinite ease-in-out example;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-500%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes example {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-20%);
+    }
+}
