@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Header from '../Components/LoginComponenets/Header';
-import WalletSignIn from '../Components/LoginComponenets/WalletSignIn';
+import Header from '../Components/LoginComponents/Header';
+import WalletSignIn from '../Components/LoginComponents/WalletSignIn';
+import Geometry from '../Components/LoginComponents/Geometry';
 import Moralis from 'moralis'
-import { useMoralis } from 'react-moralis';
+// import { useMoralis } from 'react-moralis';
+// import { useMoralis } from 'react-moralis';
 // import LoginForm from '../Components/LoginComponenets/LoginForm'
 // import SignUpForm from '../Components/LoginComponenets/SignUpForm';
 // import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-
-
 
 class Login extends Component {
     state = {
@@ -17,6 +17,10 @@ class Login extends Component {
         usernameLogin: "",
         passwordLogin: "",
         signedIn: false
+    }
+
+    componentDidMount = () => {
+        console.log("hello")
     }
 
     //input listener
@@ -111,51 +115,35 @@ class Login extends Component {
     
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <div className = "container" style = {containerStyle}>
                     <div className = "row">
                         <div className='col-md-12'>
                             <Header />
                         </div>
                         <div className='row'>
-                            <div className='col-md-10 offset-2'>
+                            <div className='col-md-9 offset-3'>
                                 <WalletSignIn
                                 handleWalletLogin={this.handleWalletLogin}
                                 />
                             </div>
                             <div className='col-md-2'>
-                                {/* <button className='btn' onClick={this.getUsernames}>get usernames</button> */}
                             </div>
-                            {/* -----Email login/signup forms------[KEEP]
-                            <div className='col-md-3 offset-1'>
-                            <SignUpForm
-                            handleInputChange={this.handleInputChange}
-                            handleSignUp={this.handleSignUp}
-                            username={this.state.username}
-                            email={this.state.email}
-                            password={this.state.password}
-                            />  
-                            <LoginForm
-                            handleInputChange={this.handleInputChange}
-                            handleLogin={this.handleLogin}
-                            usernameLogin={this.state.usernameLogin}
-                            passwordLogin={this.state.passwordLogin}
-                            handleLogout={this.handleLogout}
-                            />
-                            </div> */}
                         </div>
                     </div>
                 </div>
-            </div>
+                <Geometry />
+            </React.Fragment>
+                
         )
     }
 }
+
 
 const containerStyle = {
     // fontFamily: 'monospace',
     maxWidth: "960px",
     height: 'fit-content',
 }
-
 
 export default Login;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Components/HomeComponents/Header';
 import NavBar from '../Components/HomeComponents/NavBar'
 import Moralis from 'moralis';
+import Geometry from '../Components/HomeComponents/Geometry';
 // import $ from 'jquery';
 export class Home extends Component {
     state = {
@@ -74,9 +75,9 @@ export class Home extends Component {
 
     // NEED IPFS. GO INTO "token_uri"
     getNFTs = async () => {
-        // const address = this.state.nftAddress;
+        const address = this.state.nftAddress;
         let owner;
-        const options = { chain: 'matic', address: this.state.walletAddress };
+        const options = { chain: 'matic', address: address };
         const ethNFTs = await Moralis.Web3API.account.getNFTs(options);
         const result = ethNFTs.result;
         console.log(result);
@@ -135,6 +136,7 @@ export class Home extends Component {
                     owner={this.state.owner}
                     />
                 </div>
+                <Geometry />
             </div>
         )
     }

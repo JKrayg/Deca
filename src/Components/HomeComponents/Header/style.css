@@ -34,7 +34,8 @@
 }
 
 #logoutDrop, #logoutToggle {
-    background-color: lightslategray;
+    color: white;
+    background-color: #137676;
 }
 
 #logoutDrop, #logoutToggle:focus {

@@ -2,13 +2,7 @@
     height: 40px;
     width: 40px;
     margin-right: 5px;
-}
-
-#walletImg:hover {
-    transition: 2000ms;
-    transform: rotateX(360deg);
-    height: 40px;
-    width: 40px;
+    transition: 2000ms ease-in-out;
 }
 
 #walletBtns {
@@ -19,12 +13,13 @@
     height: 60px;
     float: left;
     box-shadow: 1px 1px 3px rgb(145, 145, 145);
-    padding: 10px 15px;
+    padding: 10px 30px;
     opacity: 90%;
+    transition: 250ms ease-in;
+    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
 }
 
 #walletBtns:hover {
-    transition: 250ms;
     font-size: 20px;
     box-shadow: 1px 5px 10px rgb(145, 145, 145);
     src: format();
@@ -32,7 +27,23 @@
     /* background-color: rgb(24, 150, 253); */
 }
 
+#walletBtns:hover #walletImg {
+    transform: rotateX(360deg);
+    height: 40px;
+    width: 40px;
+    /* background-color: rgb(24, 150, 253); */
+}
+
 #walletName {
     position: relative;
     bottom: 30%;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-500%);
+    }
+    100% {
+      transform: translateX(0);
+    }
 }
