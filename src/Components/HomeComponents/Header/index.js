@@ -7,13 +7,23 @@ function Header(props) {
         <React.Fragment>
             <div id='home_head' className = "head"> 
                 <div className = "row">
-                    <div className = "col-md-6">
+                    <div className = "col-md-3">
                         <div>
                             <Link alt='Decca' id='home_name' to = "/home"
                             className= {window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>Deca</Link>
                         </div>
                     </div>
-                    <div className = "col-md-4 offset-2">
+                    <div id='navBar' className='col-md-5 offset-1'>
+                        <Link id='navBtns' to = "/Wallet"
+                            className= {window.location.pathname === "/Wallet" ? "nav-link active" : "nav-link"}>Wallet</Link>
+                        <Link id='navBtns' to = "/Search"
+                            className= {window.location.pathname === "/Search" ? "nav-link active" : "nav-link"}>Search</Link>
+                        <Link id='navBtns' to = "/Transactions"
+                            className= {window.location.pathname === "/Transactions" ? "nav-link active" : "nav-link"}>Transactions</Link>
+                        <Link id='navBtns' to = "/Account"
+                            className= {window.location.pathname === "/Account" ? "nav-link active" : "nav-link"}>Account</Link>
+                    </div>
+                    <div className = "col-md-3">
                         <div className='row'>
                             <div className='col-md-12'>
                                 <h3 style={{float: 'right', padding: '10px'}}>Welcome {props.username}</h3>

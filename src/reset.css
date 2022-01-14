@@ -19,40 +19,37 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+
 body {
 	line-height: 1;
 	overflow-x: hidden;
 	font-family: 'IBM Plex Sans', monospace;
 	background-color: #ebfbfb;
-}
-
-body::after {
 	content: "";
 	background-image: url(https://i.imgur.com/CAp3gTD.png);
 	background-repeat: no-repeat;
 	background-size: 400px 400px;
 	background-position: center;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;
+	background-position-y: -60%;
 }
+
 
 ol, ul {
 	list-style: none;
 }
 
+
 blockquote, q {
 	quotes: none;
 }
+
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -60,10 +57,12 @@ q:before, q:after {
 	content: none;
 }
 
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 .btn:focus,.btn:active {
 	outline: none !important;

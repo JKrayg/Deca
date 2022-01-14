@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 
-class Wallet extends Component {
+class Transactions extends Component {
     render() {
         return (
             <div>
-                wallet
+                tx
             </div>
         )
     }
 }
 
-
-export default Wallet;
+export default Transactions;
