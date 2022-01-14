@@ -1,0 +1,58 @@
+#home_head {
+    padding: 10px;
+}
+
+#home_name {
+    font-size: 5rem;
+    float: left;
+    background: -webkit-linear-gradient(#17cfcf, #acecdc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0;
+}
+
+#logoutBtnGroup {
+    float: right;
+    width: fit-content;
+    /* position: relative;
+    top: 50%; */
+    
+}
+
+#flip {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#logoutBtn {
+    background-color: rgb(255, 44, 44);
+    color: white;
+    border: none;
+    text-align: center;
+    width: 100px;
+    box-shadow: 1px 2px 5px rgb(145, 145, 145);
+}
+
+#logoutDrop, #logoutToggle {
+    color: white;
+    background-color: #137676;
+}
+
+#logoutDrop, #logoutToggle:focus {
+    outline: none;
+    border: none;
+}
+
+input[type=button] {
+    outline: none;
+    border: none;
+}
+
+#navBtns {
+    display: inline;
+}
+
+#navBar {
+    padding-top: 40px;
+    padding-left: 0px;
+}

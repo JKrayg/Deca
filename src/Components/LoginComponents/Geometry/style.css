@@ -4,7 +4,7 @@
 
 #geoImgStyle {
     position: fixed;
-    top: 39%;
+    top: 35%;
     left: 2%;
     height: 151.2px;
     width: 268.8px;
@@ -13,7 +13,7 @@
 
 #geoImgStyle2 {
     position: fixed;
-    top: 2%;
+    top: 0;
     right: 4%;
     height: 97.2px;
     width: 172.8px;
@@ -44,16 +44,18 @@
     left: 3%;
     height: 151.2px;
     width: 268.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
+    animation: 2485ms infinite ease-in-out example;
+    /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
 #ringImgStyle2 {
     position: fixed;
-    top: 4%;
+    top: 5%;
     right: 4%;
     height: 97.2px;
     width: 172.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
+    animation: 2480ms infinite ease-in-out example;
+    /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
 #ringImgStyle3 {
@@ -62,7 +64,8 @@
     right: 1%;
     height: 216px;
     width: 384px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
+    animation: 2475ms infinite ease-in-out example;
+    /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
 #ringImgStyle4 {
@@ -72,82 +75,10 @@
     left: 25%;
     height: 43.2px;
     width: 76.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
+    /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
-#ring1 {
-    position: fixed;
-    rotate: 50deg;
-    top: 3%;
-    left: 21%;
-    height: 43.2px;
-    width: 76.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft;
-}
 
-#ring2 {
-    position: fixed;
-    rotate: 50deg;
-    top: 5%;
-    left: 21%;
-    height: 43.2px;
-    width: 76.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 100ms 1 slideInLeft;
-}
-
-#ring3 {
-    position: fixed;
-    rotate: 50deg;
-    top: 7%;
-    left: 21%;
-    height: 43.2px;
-    width: 76.8px;
-    animation: 1s cubic-bezier(0, 0, 0, 1.27) 200ms 1 slideInLeft;
-}
-
-/* #geoStyle {
-    position: fixed;
-}
-
-#ringStyle {
-    position: fixed;
-} */
-
-body:hover #geoImgStyle {
-    animation: 2500ms infinite ease-in-out example;
-}
-
-body:hover #ringImgStyle {
-    animation: 2485ms infinite ease-in-out example;
-}
-
-body:hover #geoImgStyle2 {
-    animation: 2495ms infinite ease-in-out example;
-}
-
-body:hover #ringImgStyle2 {
-    animation: 2480ms infinite ease-in-out example;
-}
-
-body:hover #geoImgStyle3 {
-    animation: 2490ms infinite ease-in-out example;
-}
-
-body:hover #ringImgStyle3 {
-    animation: 2475ms infinite ease-in-out example;
-}
-
-body:hover #ring1 {
-    animation: 2480ms infinite ease-in-out example;
-}
-
-body:hover #ring2 {
-    animation: 2500ms infinite ease-in-out example;
-}
-
-body:hover #ring3 {
-    animation: 2520ms infinite ease-in-out example;
-}
 
 @keyframes slideInLeft {
     0% {

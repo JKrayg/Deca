@@ -1,32 +1,20 @@
-import React, { Component } from 'react'
-import Header from '../Components/HomeComponents/Header';
+import React , { Component } from 'react'
+import NavBar from '../Components/AccountComponents/NavBar'
 import Moralis from 'moralis';
-import Geometry from '../Components/HomeComponents/Geometry';
 import { Helmet } from 'react-helmet';
-// import $ from 'jquery';
-class Home extends Component {
+import Header from '../Components/AccountComponents/Header';
+
+class Account extends Component {
     state = {
         id: '',
         username: '',
         walletAddress: '',
-        memberJoined: '',
-        nftAddress: '',
-        owner: '',
-        nfts: []
+        memberJoined: ''
     }
 
     componentDidMount() {
         this.init();
     }
-
-
-    //input listener
-    handleInputChange = e => {
-        const { name, value } = e.target;
-        this.setState({
-            [name]: value
-        });
-    };
 
 
     init = async () => {
@@ -42,7 +30,6 @@ class Home extends Component {
         })
     }
 
-
     handleLogout = async (e) => {
         e.preventDefault();
         const { history } = this.props;
@@ -52,14 +39,13 @@ class Home extends Component {
         history.push('/');
     }
 
-    //need masterKey in cloud function
-    getUsernames = async () => {
-        const users = Moralis.Object("User");
-        const query = new Moralis.Query(users);
-        const results = await query.find({ useMasterKey: true });
-        console.log('usernames:', results);
-    }
 
+    handleInputChange = e => {
+        const { name, value } = e.target;
+        this.setState({
+            [name]: value
+        });
+    };
 
     changeUsername = async () => {
         const username = this.state.username;
@@ -72,22 +58,9 @@ class Home extends Component {
         currentUser.save();
     }
 
-
-    // getEthAddress = async () => {
-    //     const currentUser = await Moralis.User.current();
-    //     const address = currentUser.attributes.ethAddress;
-    //     this.setState({
-    //         id: user.id,
-    //         username: user.attributes.username,
-    //         walletAddress: user.attributes.accounts[0]
-    //     })
-    // }
-
-
-    
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Helmet bodyAttributes={{
                     style: backgroundImage}}/>
                 <Header
@@ -97,19 +70,31 @@ class Home extends Component {
                 handleLogout={this.handleLogout}
                 />
                 <div style={containerStyle} className='container'>
+                    <NavBar
+                    username={this.state.username}
+                    handleInputChange={this.handleInputChange}
+                    changeUsername={this.changeUsername}
+                    walletAddress={this.state.walletAddress}
+                    memberJoined={this.state.memberJoined}
+                    />
                 </div>
-                <Geometry />
-            </div>
+            </React.Fragment>
+            
         )
     }
 }
 
 const containerStyle = {
-    marginTop: "40px",
+    border: '3px solid #17cfcf',
+    borderRadius: '10px',
+    backgroundColor: '#17cfcf54',
+    padding: '20px 40px',
+    marginTop: "30px",
     maxWidth: "960px"
 }
 
 const backgroundImage =
 'background-image : url(https://i.imgur.com/Saepkjx.png);'+
 'background-size: 267.75px 388.5px;'
-export default Home;
+
+export default Account;

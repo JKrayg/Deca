@@ -5,6 +5,8 @@ import Login from './Pages/Login';
 import Home from './Pages/Home';
 import Wallet from './Pages/Wallet';
 import Search from './Pages/Search';
+import Account from './Pages/Account';
+import Transactions from './Pages/Transactions';
 
 export class App extends Component {
   render() {
@@ -17,6 +19,8 @@ export class App extends Component {
             <Route exact path = "/Home" component = {Home}/>
             <Route exact path = "/Wallet" component = {Wallet}/>
             <Route exact path = "/Search" component = {Search}/>
+            <Route exact path = "/Transactions" component = {Transactions}/>
+            <Route exact path = "/Account" component = {Account}/>
           </Switch>
         </Router>
       </React.Fragment>
