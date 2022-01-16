@@ -1,5 +1,5 @@
 import React , { Component } from 'react'
-import NavBar from '../Components/AccountComponents/NavBar'
+import Profile from '../Components/AccountComponents/Profile'
 import Moralis from 'moralis';
 import { Helmet } from 'react-helmet';
 import Header from '../Components/AccountComponents/Header';
@@ -70,7 +70,7 @@ class Account extends Component {
                 handleLogout={this.handleLogout}
                 />
                 <div style={containerStyle} className='container'>
-                    <NavBar
+                    <Profile
                     username={this.state.username}
                     handleInputChange={this.handleInputChange}
                     changeUsername={this.changeUsername}

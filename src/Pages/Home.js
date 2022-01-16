@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Header from '../Components/HomeComponents/Header';
 import Moralis from 'moralis';
-import Geometry from '../Components/HomeComponents/Geometry';
+import Dashboard from '../Components/HomeComponents/Dashboard';
+// import Geometry from '../Components/HomeComponents/Geometry';
 import { Helmet } from 'react-helmet';
 // import $ from 'jquery';
 class Home extends Component {
@@ -97,8 +98,9 @@ class Home extends Component {
                 handleLogout={this.handleLogout}
                 />
                 <div style={containerStyle} className='container'>
+                    <Dashboard />
                 </div>
-                <Geometry />
+                {/* <Geometry /> */}
             </div>
         )
     }
@@ -111,5 +113,6 @@ const containerStyle = {
 
 const backgroundImage =
 'background-image : url(https://i.imgur.com/Saepkjx.png);'+
-'background-size: 267.75px 388.5px;'
+'background-size: 267.75px 388.5px;'+
+'background-position-y: -250%'
 export default Home;
