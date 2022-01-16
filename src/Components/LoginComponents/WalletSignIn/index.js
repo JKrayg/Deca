@@ -26,7 +26,7 @@ function WalletSignIn(props) {
     return (
         <React.Fragment>
             {wallets.map(results => (
-                <div key={uuidv4()}>
+                <div key={uuidv4()} id='btn-con'>
                     <button
                     value="submit"
                     name={results.wallet}

@@ -5,6 +5,10 @@
     transition: 2000ms ease-in-out;
 }
 
+#btn-con {
+    text-align: center;
+}
+
 #walletBtns {
     margin-top: 10px;
     margin-right: 10px;

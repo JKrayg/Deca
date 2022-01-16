@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 // import Moralis from 'moralis';
 
-function NavBar(props) {
+function Profile(props) {
   return (
     <React.Fragment>
       <div className="row">
@@ -53,4 +53,4 @@ function NavBar(props) {
     </React.Fragment>
   )
 }
-export default NavBar
+export default Profile;
