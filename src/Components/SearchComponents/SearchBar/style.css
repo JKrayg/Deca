@@ -1,6 +1,5 @@
 .card{
     display: block;
-    height: fit-content;
     width: fit-content;
     background-color: #acecdc8f;
     border: 3px solid #17cfcf;
@@ -28,8 +27,14 @@
     border: 3px solid #17cfcf;
 }
 
+#nftCard:hover #nft-image {
+    height: 110%;
+    width: 110%;
+}
+
 #nft-image {
-    border-radius: 10px;
+    border-radius: 5px;
+    transition: 500ms ease-in;
 }
 
 .card-body {

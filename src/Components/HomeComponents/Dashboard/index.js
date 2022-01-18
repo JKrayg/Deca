@@ -4,7 +4,7 @@ import './style.css'
 
 function Dashboard() {
   return (
-    <div id="navBar" className="row">
+    <div id="dashCon" className="row">
       <div className="col-md-12">
         <div id="navBtns">
           <Link
