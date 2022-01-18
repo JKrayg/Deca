@@ -51,7 +51,8 @@ class Search extends Component {
         });
     };
 
-    // NEED IPFS. GO INTO "token_uri"
+
+
     getNFTs = async () => {
         const address = this.state.nftAddress;
         let owner;

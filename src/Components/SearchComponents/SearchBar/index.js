@@ -3,6 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 import './style.css'
 
 function SearchBar(props) {
+
+  const toIPFS = (image) => {
+    image = image.replace(':', '');
+    image = 'https://ipfs.io/' + image;
+    return image;
+  }
+
   return (
     <div>
       <div className="row">
@@ -10,7 +17,11 @@ function SearchBar(props) {
           {props.nfts.map((nft) => (
             <div key={uuidv4()} id="nftCard" className="card">
               <img
-                src={nft.image}
+                src={
+                  !nft.image.includes("https")
+                    ? toIPFS(nft.image)
+                    : nft.image
+                }
                 id="nft-image"
                 className="card-img-top"
                 alt="..."
