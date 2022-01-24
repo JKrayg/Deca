@@ -145,5 +145,4 @@ const containerStyle = {
     maxWidth: "960px",
     height: 'fit-content',
 }
-
 export default Login;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from '../Components/SearchComponents/SearchBar';
 import Moralis from 'moralis';
-import Helmet from 'react-helmet';
 import Header from '../Components/SearchComponents/Header';
 
 
@@ -51,51 +50,47 @@ class Search extends Component {
         });
     };
 
-
-
     getNFTs = async () => {
         const address = this.state.nftAddress;
         let owner;
         const options = { chain: 'matic', address: address };
         const ethNFTs = await Moralis.Web3API.account.getNFTs(options);
         const result = ethNFTs.result;
-        console.log(result);
         let tokens = [];
-        for (let i = 0; i < 4; i++) {
-            owner = result[i].owner_of;
-            // const metadata = result[i].metadata;
-            const tokenURI = result[i].token_uri;
+        console.log(result);
+        if (result.length <= 10) {
+            for (let i = 0; i < result.length; i++) {
+                owner = result[i].owner_of;
+                this.setState({
+                    owner: owner
+                })
+                const tokenURI = result[i].token_uri;
 
-            fetch(tokenURI, {method: 'GET'})
-            .then(response => response.json())
-            .then(data => {
-               console.log(data);
-               if (data === null) {
-                console.log("Element " + i + " has no data");
-                } else {
-                    tokens.push(data)
-                    console.log("tokens", tokens)
-                    this.setState({
-                        nfts: tokens
-                    })
+                fetch(tokenURI, {method: 'GET'})
+                .then(response => response.json())
+                .then(data => {
+                console.log(data);
+                if (data === null) {
+                    console.log("Element " + i + " has no data");
+                    } else {
+                        tokens.push(data)
+                        console.log("tokens", tokens)
+                        this.setState({
+                            nfts: tokens
+                        })
+                        
+                    }
                     
-                }
-            })
-
-            // const parse = JSON.parse(metadata)
-            // console.log(metadata)
+                })
+            }
         }
-        this.setState({
-            owner: owner
-        })
-        console.log(this.state.nfts)
+        return 0;
     }
 
 
     render() {
         return (
             <React.Fragment>
-              <Helmet bodyAttributes={{style: backgroundImage}} />
                 <Header
                 id={this.state.id}
                 username={this.state.username}
@@ -123,8 +118,4 @@ const containerStyle = {
     maxWidth: "960px",
     height: 'fit-content',
 }
-
-const backgroundImage =
-'background-image : url(https://i.imgur.com/Saepkjx.png);'+
-'background-size: 267.75px 388.5px;'
 export default Search;

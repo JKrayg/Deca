@@ -3,7 +3,7 @@ import Header from '../Components/HomeComponents/Header';
 import Moralis from 'moralis';
 import Dashboard from '../Components/HomeComponents/Dashboard';
 // import Geometry from '../Components/HomeComponents/Geometry';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 // import $ from 'jquery';
 class Home extends Component {
     state = {
@@ -72,25 +72,10 @@ class Home extends Component {
         currentUser.set("username", username);
         currentUser.save();
     }
-
-
-    // getEthAddress = async () => {
-    //     const currentUser = await Moralis.User.current();
-    //     const address = currentUser.attributes.ethAddress;
-    //     this.setState({
-    //         id: user.id,
-    //         username: user.attributes.username,
-    //         walletAddress: user.attributes.accounts[0]
-    //     })
-    // }
-
-
     
     render() {
         return (
-            <div>
-                <Helmet bodyAttributes={{
-                    style: backgroundImage}}/>
+            <React.Fragment>
                 <Header
                 id={this.state.id}
                 username={this.state.username}
@@ -101,7 +86,7 @@ class Home extends Component {
                     <Dashboard />
                 </div>
                 {/* <Geometry /> */}
-            </div>
+            </React.Fragment>
         )
     }
 }
@@ -110,9 +95,4 @@ const containerStyle = {
     marginTop: "40px",
     maxWidth: "960px"
 }
-
-const backgroundImage =
-'background-image : url(https://i.imgur.com/Saepkjx.png);'+
-'background-size: 267.75px 388.5px;'+
-'background-position-y: -250%'
 export default Home;
