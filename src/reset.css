@@ -35,9 +35,9 @@ body {
 	content: "";
 	background-image: url(https://i.imgur.com/CAp3gTD.png);
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: 400px 400px;
 	background-position: center;
-	background-position-y: -60%;
 }
 
 
