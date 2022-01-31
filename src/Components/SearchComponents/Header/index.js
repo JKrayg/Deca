@@ -10,11 +10,11 @@ function Header(props) {
                 <div className = "row">
                     <div className = "col-md-3">
                         <div>
-                            <Link alt='Decca' id='home_name' to = "/home"
+                            <Link alt='Decca' id='search_name' to = "/home"
                             className= {window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>Deca</Link>
                         </div>
                     </div>
-                    <div id='navBar' className='col-md-5 offset-1'>
+                    <div id='navBar' className='col-md-5'>
                         <Link id='navBtns' to = "/Wallet"
                             className= {window.location.pathname === "/Wallet" ? "nav-link active" : "nav-link"}>Wallet</Link>
                         <Link id='navBtns' to = "/Search"

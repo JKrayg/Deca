@@ -20,10 +20,10 @@
     margin-right: 10px;
     margin-bottom: 10px;
     width: 30%;
-    height: fit-content;
     padding: 7px;
     font-size: 11px;
-    display: inline-block;
+    display: flex;
+    float: left;
     border: 3px solid #17cfcf;
 }
 

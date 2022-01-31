@@ -58,7 +58,7 @@ class Search extends Component {
         const result = ethNFTs.result;
         let tokens = [];
         console.log(result);
-        if (result.length <= 10) {
+        if (result.length <= 189) {
             for (let i = 0; i < result.length; i++) {
                 owner = result[i].owner_of;
                 this.setState({

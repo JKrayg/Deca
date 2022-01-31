@@ -19,8 +19,34 @@ class Login extends Component {
         signedIn: false
     }
 
+    // componentWillMount = () => {
+    //     console.log("hello")
+    //     document.body.style.content = "";
+    //     document.body.style.backgroundImage =  "url(https://i.imgur.com/CAp3gTD.png)";
+    //     document.body.style.backgroundRepeat = "no-repeat";
+    //     document.body.style.backgroundAttachment = "fixed";
+    //     document.body.style.backgroundSize = "400px 400px";
+    //     document.body.style.backgroundPosition = "center";
+    // }
+
     componentDidMount = () => {
         console.log("hello")
+        document.body.style.content = "";
+        document.body.style.backgroundImage =  "url(https://i.imgur.com/CAp3gTD.png)";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundSize = "400px 400px";
+        document.body.style.backgroundPosition = "center";
+    }
+
+    componentWillUnmount = () => {
+        console.log("hello")
+        document.body.style.content = null;
+        document.body.style.backgroundImage =  null;
+        document.body.style.backgroundRepeat = null;
+        document.body.style.backgroundAttachment = null;
+        document.body.style.backgroundSize = null;
+        document.body.style.backgroundPosition = null;
     }
 
     //input listener

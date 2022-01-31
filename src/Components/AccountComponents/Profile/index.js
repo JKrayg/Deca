@@ -3,6 +3,12 @@ import './style.css'
 // import Moralis from 'moralis';
 
 function Profile(props) {
+
+  function clipBoard() {
+    navigator.clipboard.writeText(props.walletAddress);
+    return props.walletAddress;
+  }
+
   return (
     <React.Fragment>
       <div className="row">
@@ -47,10 +53,12 @@ function Profile(props) {
           <h4 style={{ margin: '10px 0px', fontSize: '14px' }}>
             Ethereum wallet address:
           </h4>
-          <h5 style={{ fontWeight: 'bold' }}>{props.walletAddress}</h5>
+          <h5 style={{ fontWeight: 'bold' }}>
+            {props.walletAddress} <button onClick={clipBoard()}>copy</button>
+          </h5>
         </div>
       </div>
     </React.Fragment>
   )
 }
-export default Profile;
+export default Profile

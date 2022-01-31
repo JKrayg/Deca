@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../Components/HomeComponents/Header';
+import Geometry from '../Components/HomeComponents/Geometry';
 import Moralis from 'moralis';
 import Dashboard from '../Components/HomeComponents/Dashboard';
 // import Geometry from '../Components/HomeComponents/Geometry';
@@ -16,8 +17,37 @@ class Home extends Component {
         nfts: []
     }
 
-    componentDidMount() {
+    // componentWillMount = () => {
+    //     console.log("hello")
+    //     document.body.style.content = "";
+    //     document.body.style.backgroundImage =  "url(https://i.imgur.com/5Kty486.png)";
+    //     document.body.style.backgroundRepeat = "no-repeat";
+    //     document.body.style.backgroundAttachment = "fixed";
+    //     document.body.style.backgroundSize = "2553.6px 1436.4px";
+    //     document.body.style.backgroundPosition = "center";
+    // }
+
+    componentDidMount = () => {
         this.init();
+        console.log("hello")
+        document.body.style.content = "";
+        document.body.style.backgroundImage =  "url(https://i.imgur.com/e13rAvS.png)";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundSize = "2553.6px 1436.4px";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundPositionX = "56%";
+        document.body.style.backgroundPositionY = "52%";
+    }
+
+    componentWillUnmount = () => {
+        console.log("hello")
+        document.body.style.content = null;
+        document.body.style.backgroundImage =  null;
+        document.body.style.backgroundRepeat = null;
+        document.body.style.backgroundAttachment = null;
+        document.body.style.backgroundSize = null;
+        document.body.style.backgroundPosition = null;
     }
 
 
@@ -85,7 +115,7 @@ class Home extends Component {
                 <div style={containerStyle} className='container'>
                     <Dashboard />
                 </div>
-                {/* <Geometry /> */}
+                <Geometry />
             </React.Fragment>
         )
     }

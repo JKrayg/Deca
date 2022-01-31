@@ -1,7 +1,6 @@
 import React , { Component } from 'react'
 import Profile from '../Components/AccountComponents/Profile'
 import Moralis from 'moralis';
-import { Helmet } from 'react-helmet';
 import Header from '../Components/AccountComponents/Header';
 
 class Account extends Component {
@@ -61,8 +60,6 @@ class Account extends Component {
     render() {
         return (
             <React.Fragment>
-                <Helmet bodyAttributes={{
-                    style: backgroundImage}}/>
                 <Header
                 id={this.state.id}
                 username={this.state.username}
@@ -92,9 +89,5 @@ const containerStyle = {
     marginTop: "30px",
     maxWidth: "960px"
 }
-
-const backgroundImage =
-'background-image : url(https://i.imgur.com/Saepkjx.png);'+
-'background-size: 267.75px 388.5px;'
 
 export default Account;
