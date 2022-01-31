@@ -2,7 +2,7 @@
     padding: 10px;
 }
 
-#home_name {
+#search_name {
     font-size: 5rem;
     float: left;
     background: -webkit-linear-gradient(#17cfcf, #acecdc);
@@ -55,5 +55,6 @@ input[type=button] {
 #navBar {
     padding-top: 40px;
     padding-left: 0px;
+    padding-right: 0;
     width: fit-content;
 }

@@ -7,6 +7,7 @@
 
 #btn-con {
     text-align: center;
+    display: inline;
 }
 
 #walletBtns {
@@ -15,7 +16,6 @@
     border: none;
     font-size: 18px;
     height: 60px;
-    float: left;
     box-shadow: 1px 1px 3px rgb(145, 145, 145);
     padding: 10px 30px;
     opacity: 90%;

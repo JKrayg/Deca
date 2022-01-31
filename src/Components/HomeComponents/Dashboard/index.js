@@ -5,8 +5,9 @@ import './style.css'
 function Dashboard() {
   return (
     <React.Fragment>
-      <div id="dashCon" className="row">
-        <div className="col-md-12">
+      <div className="row">
+        <div id="dashCon" className="col-md-12">
+          <div id="navTop"></div>
           <div id="navBtns">
             <Link
               id="walletLink"
@@ -59,6 +60,7 @@ function Dashboard() {
               Account
             </Link>
           </div>
+          <div id="navBtm"> </div>
         </div>
       </div>
     </React.Fragment>

@@ -3,11 +3,12 @@
 }
 
 #home_name {
-    font-size: 5rem;
+    font-size: 7rem;
     float: left;
-    background: -webkit-linear-gradient(#17cfcf, #acecdc);
+    color: #138985;
+    /* background: -webkit-linear-gradient(#17cfcf, #acecdc);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     padding-bottom: 0;
 }
 
