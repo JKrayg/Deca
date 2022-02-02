@@ -3,9 +3,8 @@
     text-align: center;
 }
 
-
 #navTop {
-    padding: 5px 0px;
+    padding: 12px 0px;
     display: inline;
     margin: 1px 1px;
     text-align: center;
@@ -16,12 +15,11 @@
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(180, 87, 21, 0.658);
+    background-color: rgba(255, 217, 0, 0.404);
 }
 
-
 #navBtm {
-    padding: 5px 0px;
+    padding: 12px 0px;
     display: inline;
     margin: 1px 1px;
     text-align: center;
@@ -32,54 +30,53 @@
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(180, 87, 21, 0.658);
+    background-color: rgba(255, 217, 0, 0.404);
 }
 
 a#walletLink.nav-link {
     padding: 15px;
     display: inline;
-    margin: 1px 1px;
+    margin: 1px 5px;
     text-align: center;
     color: white;
-    border: 5px solid rgb(112, 56, 16);
+    border: 5px solid rgb(159, 113, 89);
     box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 5px;
     border-end-end-radius: 10px;
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(180, 87, 21, 0.658);
+    background-color: rgba(159, 114, 89, 0.616);
     transition: 500ms ease-in-out;
 }
 
 a#walletLink.nav-link:hover {
-    background-color: rgb(112, 56, 16);
+    background-color: rgb(159, 113, 89);
 }
-
 
 a#searchLink.nav-link {
     padding: 15px;
     display: inline;
-    margin: 1px 1px;
+    margin: 1px 5px;
     text-align: center;
     color: white;
-    border: 5px solid rgb(126, 126, 126);
+    border: 5px solid rgb(209, 209, 209);
     box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 5px;
     border-end-end-radius: 10px;
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(126, 126, 126, 0.541);
+    background-color: rgba(209, 209, 209, 0.568);
     transition: 500ms ease-in-out;
 }
 
 a#searchLink.nav-link:hover {
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(209, 209, 209);
 }
 
 a#txLink.nav-link {
     padding: 15px;
     display: inline;
-    margin: 1px 1px;
+    margin: 1px 5px;
     text-align: center;
     color: white;
     border: 5px solid rgb(0, 165, 41);
@@ -88,7 +85,7 @@ a#txLink.nav-link {
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(51, 202, 88, 0.589);
+    background-color: rgba(0, 165, 41, 0.507);
     transition: 500ms ease-in-out;
 }
 
@@ -99,7 +96,7 @@ a#txLink.nav-link:hover {
 a#accountLink.nav-link {
     padding: 15px;
     display: inline;
-    margin: 1px 1px;
+    margin: 1px 5px;
     text-align: center;
     color: white;
     border: 5px solid rgb(0, 111, 185);
@@ -108,7 +105,7 @@ a#accountLink.nav-link {
     border-end-start-radius: 10px;
     border-start-end-radius: 10px;
     border-start-start-radius: 10px;
-    background-color: rgba(49, 147, 212, 0.596);
+    background-color: rgba(0, 111, 185, 0.507);
     transition: 500ms ease-in-out;
 }
 

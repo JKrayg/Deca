@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Moralis from 'moralis';
+import CoinGecko from 'coingecko-api';
 import Header from '../Components/HomeComponents/Header';
 import Geometry from '../Components/HomeComponents/Geometry';
-import Moralis from 'moralis';
 import Dashboard from '../Components/HomeComponents/Dashboard';
+import CoinTicker from '../Components/HomeComponents/CoinTicker';
 // import Geometry from '../Components/HomeComponents/Geometry';
 // import { Helmet } from 'react-helmet';
 // import $ from 'jquery';
@@ -14,7 +16,8 @@ class Home extends Component {
         memberJoined: '',
         nftAddress: '',
         owner: '',
-        nfts: []
+        nfts: [],
+        coins: []
     }
 
     // componentWillMount = () => {
@@ -71,6 +74,7 @@ class Home extends Component {
             walletAddress: user.attributes.ethAddress,
             memberJoined: joined
         })
+        this.getCoins();
     }
 
 
@@ -103,6 +107,25 @@ class Home extends Component {
         currentUser.save();
     }
     
+    getCoins = async () => {
+        let coinArr = [];
+        let topCoins = ['bitcoin', 'ethereum', 'matic-network', 'solana', 'decentraland', 'theta-token', 'cardano'];
+        const CoinGeckoClient = new CoinGecko();
+        let res;
+        for(let i in topCoins) {
+            res = await CoinGeckoClient.coins.fetch(topCoins[i], {});
+            coinArr.push(res.data);
+        }
+        
+        res = await CoinGeckoClient.coins.all();
+        console.log(coinArr);
+        console.log(res)
+        
+        this.setState({
+            coins: coinArr
+        })
+      }
+    
     render() {
         return (
             <React.Fragment>
@@ -111,9 +134,13 @@ class Home extends Component {
                 username={this.state.username}
                 walletAddress={this.state.walletAddress}
                 handleLogout={this.handleLogout}
+                // getCoins = {this.getCoins}
                 />
                 <div style={containerStyle} className='container'>
                     <Dashboard />
+                    <CoinTicker
+                    coins = {this.state.coins}
+                    />
                 </div>
                 <Geometry />
             </React.Fragment>
