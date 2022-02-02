@@ -15,8 +15,29 @@ class Wallet extends Component {
         nfts: []
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.init();
+        console.log("hello")
+        document.body.style.content = "";
+        document.body.style.backgroundImage =  "url(https://i.imgur.com/Uan9xOT.png)";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundColor = "none";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundSize = "1920px 1080";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundPositionX = "56%";
+        document.body.style.backgroundPositionY = "52%";
+    }
+
+    componentWillUnmount = () => {
+        console.log("hello")
+        document.body.style.backgroundColor = null;
+        document.body.style.content = null;
+        document.body.style.backgroundImage =  null;
+        document.body.style.backgroundRepeat = null;
+        document.body.style.backgroundAttachment = null;
+        document.body.style.backgroundSize = null;
+        document.body.style.backgroundPosition = null;
     }
 
 

@@ -44,7 +44,7 @@
     left: 3%;
     height: 151.2px;
     width: 268.8px;
-    animation: 2485ms infinite ease-in-out example;
+    animation: 4085ms infinite ease-in-out example;
     /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
@@ -54,7 +54,7 @@
     right: 4%;
     height: 97.2px;
     width: 172.8px;
-    animation: 2480ms infinite ease-in-out example;
+    animation: 4080ms infinite ease-in-out example;
     /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
@@ -64,7 +64,7 @@
     right: 1%;
     height: 216px;
     width: 384px;
-    animation: 2475ms infinite ease-in-out example;
+    animation: 4075ms infinite ease-in-out example;
     /* animation: 1s cubic-bezier(0, 0, 0, 1.27) 0s 1 slideInLeft; */
 }
 
@@ -93,6 +93,6 @@
         transform: translateY(0%);
     }
     50% {
-        transform: translateY(-20%);
+        transform: translateY(-15%);
     }
 }

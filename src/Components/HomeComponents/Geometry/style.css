@@ -7,8 +7,8 @@
     width: 554.4px;
     position: absolute;
     z-index: -1;
-    top: 10%;
-    left: 8%;
+    top: 11%;
+    left: 7%;
     animation: 85000ms infinite ease-in-out clockwise;
 }
 
@@ -49,7 +49,7 @@
     z-index: -2;
     top: 25%;
     right: 36%;
-    animation: 2480ms infinite ease-in-out example;
+    animation: 2380ms infinite ease-in-out bounce;
 }
 
 #geo-mini2 {
@@ -59,7 +59,7 @@
     z-index: -2;
     top: 40%;
     right: 15%;
-    animation: 2480ms infinite ease-in-out example;
+    animation: 2290ms infinite ease-in-out bounce;
 }
 #geo-mini3 {
     height: 7.35px;
@@ -87,7 +87,7 @@
     z-index: -2;
     top: 5%;
     right: 45%;
-    animation: 2490ms infinite ease-in-out example;
+    animation: 2190ms infinite ease-in-out bounce;
 }
 
 #geo-mini6 {
@@ -107,7 +107,7 @@
     z-index: -2;
     bottom: 15%;
     right: 30%;
-    animation: 2490ms infinite ease-in-out example;
+    animation: 2550ms infinite ease-in-out bounce;
 }
 
 #geo-mini8 {
@@ -117,7 +117,7 @@
     z-index: -2;
     bottom: 25%;
     right: 35%;
-    animation: 2490ms infinite ease-in-out example;
+    animation: 2500ms infinite ease-in-out bounce;
 }
 
 @keyframes slideInLeft {
@@ -159,11 +159,11 @@
     }
 }
 
-@keyframes example {
+@keyframes bounce {
     0% {
         transform: translateY(0%);
     }
     50% {
-        transform: translateY(-30%);
+        transform: translateY(-40%);
     }
 }
