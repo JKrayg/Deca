@@ -108,18 +108,22 @@ class Home extends Component {
     }
     
     getCoins = async () => {
-        let coinArr = [];
-        let topCoins = ['bitcoin', 'ethereum', 'matic-network', 'solana', 'decentraland', 'theta-token', 'cardano'];
+        // let topCoins = ['bitcoin', 'ethereum', 'matic-network', 'solana', 'decentraland', 'theta-token', 'cardano'];
         const CoinGeckoClient = new CoinGecko();
-        let res;
-        for(let i in topCoins) {
-            res = await CoinGeckoClient.coins.fetch(topCoins[i], {});
-            coinArr.push(res.data);
+        let res = await CoinGeckoClient.coins.all();
+        let coinArr = [];
+        for(let i = 0;i < 28; i++) {
+            coinArr.push(res.data[i]);
         }
         
-        res = await CoinGeckoClient.coins.all();
+        
+        // for(let i in topCoins) {
+        //     res = await CoinGeckoClient.coins.fetch(topCoins[i], {});
+        //     coinArr.push(res.data);
+        // }
+        
         console.log(coinArr);
-        console.log(res)
+        console.log(res.data)
         
         this.setState({
             coins: coinArr
